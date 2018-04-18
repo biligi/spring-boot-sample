@@ -6,5 +6,10 @@ pipeline {
         checkout scm
       }
     }
+    stage('') {
+      steps {
+        junit 'target/surefire-reports/*.xml'
+      }
+    }
   }
 }
